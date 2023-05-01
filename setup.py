@@ -5,7 +5,7 @@
 #       python setup.py py2exe
 #
 
-"Creador de instalador para PyAfipWs"
+"Creador de instalador para PyAfipWs2"
 from __future__ import print_function
 from __future__ import absolute_import
 
@@ -37,10 +37,10 @@ desc = (
     "Interfases, tools and apps for Argentina's gov't. webservices "
     "(soap, com/dll, pdf, dbf, xml, etc.)"
 )
-kwargs["package_dir"] = {"pyafipws": "."}
-kwargs["packages"] = ["pyafipws", "pyafipws.formatos"]
+kwargs["package_dir"] = {"pyafipws2": "."}
+kwargs["packages"] = ["pyafipws2", "pyafipws2.formatos"]
 opts = {}
-data_files = [("pyafipws/plantillas", glob.glob("plantillas/*"))]
+data_files = [("pyafipws2/plantillas", glob.glob("plantillas/*"))]
 
 
 long_desc = (
@@ -62,13 +62,12 @@ if "sdist" in sys.argv and os.path.exists("README.md") and sys.platform == "linu
 
 
 setup(
-    name="PyAfipWs",
+    name="PyAfipWs2",
     version=__version__,
     description=desc,
     long_description=long_desc,
     author="Mariano Reingart",
-    author_email="reingart@gmail.com",
-    url="https://github.com/reingart/pyafipws",
+    url="https://github.com/EricDumrauf/pyafipws2",
     license="LGPL-3.0-or-later",
     options=opts,
     data_files=data_files,
